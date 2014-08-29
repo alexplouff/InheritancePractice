@@ -14,14 +14,14 @@ public class HourlyEmployee extends Employee {
 
     private double hourlyRate;
     private double hoursWorked;
-
-    public HourlyEmployee(String firstName, String lastName, String employeeID,
-                                    double hourlyRate, double hoursWorked) {
-        super(firstName, lastName, employeeID);
+    Employee e;
+    
+    public HourlyEmployee( double hourlyRate, double hoursWorked, Employee e) {
         this.hourlyRate = hourlyRate;
         this.hoursWorked = hoursWorked;
+        this.e = e;
     }
-
+    
     public void setHourlyRate(double hourlyRate) {
         this.hourlyRate = hourlyRate;
     }
@@ -36,18 +36,27 @@ public class HourlyEmployee extends Employee {
 
     public double getHoursWorked() {
         return hoursWorked;
+    }   
+    
+    public double getWeeklyPay(){
+        return hoursWorked * hourlyRate;
     }
     
-    public double getWeeklyPayAmount(){
-        return hourlyRate * hoursWorked;
+    @Override
+    public String toString(){
+
+        return e.toString() + "\n" + "Wage: $" + hourlyRate + "/hour\n" + "Hours Worked: "
+                                + hoursWorked + "\nThis Weeks Pay: " + this.getWeeklyPay() ; 
     }
-    
     
     public static void main(String[] args) {
         
-        HourlyEmployee he1 = new HourlyEmployee( "Alex " , "Plouff " , "E101 " , 12 , 40  );
+        Employee e1 = new Employee ("Alex" , "Plouff" , "E102");
+        Employee e2= new Employee ("Scott" , "Plouff" , "S402");
         
-        System.out.println(he1.toString());
+        e1 = new HourlyEmployee ( 20 , 6 , e1);
+        e2 = new HourlyEmployee ( 15 , 32 , e2);
+        System.out.println(e1.toString() + "\n\n" + e2.toString());
     }
     
     

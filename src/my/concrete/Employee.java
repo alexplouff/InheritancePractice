@@ -26,6 +26,8 @@ public class Employee {
         
     }
     
+       public Employee( ){}
+    
     public void setFirstName( String firstName ){
         this.firstName = firstName;
     }
@@ -52,7 +54,7 @@ public class Employee {
     
     @Override
     public String toString(){
-        return firstName + lastName + employeeID;
+        return "Name: " + firstName + " " + lastName + "\n" + "Employee ID: " + employeeID;
     }
     
     
