@@ -18,8 +18,6 @@ public class Employee {
     
     private String employeeID;
     
-    
-    
     public Employee( String firstName, String lastName, 
                             String employeeID){
         this.firstName = firstName;
@@ -52,9 +50,14 @@ public class Employee {
         return employeeID;
     }
     
+    @Override
     public String toString(){
         return firstName + lastName + employeeID;
     }
+    
+    
+    
+    
 //    public static void main(String[] args) {
 //        
 //        Employee e1 = new Employee( "Alex " , "Plouff ", "P520");
