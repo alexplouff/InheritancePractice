@@ -49,23 +49,5 @@ public class SalariedEmployee extends Employee{
     public String toString () {
         return employee.toString() + "\nSalary: $" + salary 
                         + "\nMonthly Take Home: $" + this.getMonthlyPay();
-    }
-    
-    
-    
-    public static void main(String[] args) {
-        
-        Employee e1 = new Employee( "Alex" , "Plouff" , "E102");
-        Employee e2 = new Employee( "Scott" , "Plouff" , "R201");
-        
-        e1 = new SalariedEmployee( e1 , 75000 );
-        e2 = new SalariedEmployee ( e2 , 85000 );
-        
-        System.out.println(e1 + "\n\n" + e2);
-    }
-    
-    
-    
-    
-    
+    }    
 }

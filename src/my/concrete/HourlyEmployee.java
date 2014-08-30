@@ -48,16 +48,4 @@ public class HourlyEmployee extends Employee {
         return e.toString() + "\n" + "Wage: $" + hourlyRate + "/hour\n" + "Hours Worked: "
                                 + hoursWorked + "\nThis Weeks Pay: " + this.getWeeklyPay() ; 
     }
-    
-    public static void main(String[] args) {
-        
-        Employee e1 = new Employee ( "Alex" , "Plouff" , "E102" );
-        Employee e2= new Employee ( "Scott" , "Plouff" , "S402" );
-        
-        e1 = new HourlyEmployee ( 20 , 6 , e1 );
-        e2 = new HourlyEmployee ( 15 , 32 , e2 );
-        System.out.println(e1.toString() + "\n\n" + e2.toString());
-    }
-    
-    
 }
