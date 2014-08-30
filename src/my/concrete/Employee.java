@@ -13,20 +13,18 @@ package my.concrete;
 public class Employee {
     
     private String firstName;
-    
     private String lastName;
-    
     private String employeeID;
     
     public Employee( String firstName, String lastName, 
-                            String employeeID){
+                        String employeeID ) 
+    {
         this.firstName = firstName;
         this.lastName = lastName;
         this.employeeID = employeeID;
-        
     }
     
-       public Employee( ){}
+    public Employee(  ){}
     
     public void setFirstName( String firstName ){
         this.firstName = firstName;
@@ -56,15 +54,5 @@ public class Employee {
     public String toString(){
         return "Name: " + firstName + " " + lastName + "\n" + "Employee ID: " + employeeID;
     }
-    
-    
-    
-    
-//    public static void main(String[] args) {
-//        
-//        Employee e1 = new Employee( "Alex " , "Plouff ", "P520");
-//        Employee e2 = new Employee( "Scott ", "Plouff " , "E340");
-//        
-//        System.out.println(e1.toString() + "\n" + e2.toString());
-//    }
+
 }

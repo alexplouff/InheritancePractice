@@ -14,7 +14,7 @@ public class HourlyEmployee extends Employee {
 
     private double hourlyRate;
     private double hoursWorked;
-    Employee e;
+    private Employee e;
     
     public HourlyEmployee( double hourlyRate, double hoursWorked, Employee e) {
         this.hourlyRate = hourlyRate;
@@ -51,11 +51,11 @@ public class HourlyEmployee extends Employee {
     
     public static void main(String[] args) {
         
-        Employee e1 = new Employee ("Alex" , "Plouff" , "E102");
-        Employee e2= new Employee ("Scott" , "Plouff" , "S402");
+        Employee e1 = new Employee ( "Alex" , "Plouff" , "E102" );
+        Employee e2= new Employee ( "Scott" , "Plouff" , "S402" );
         
-        e1 = new HourlyEmployee ( 20 , 6 , e1);
-        e2 = new HourlyEmployee ( 15 , 32 , e2);
+        e1 = new HourlyEmployee ( 20 , 6 , e1 );
+        e2 = new HourlyEmployee ( 15 , 32 , e2 );
         System.out.println(e1.toString() + "\n\n" + e2.toString());
     }
     
