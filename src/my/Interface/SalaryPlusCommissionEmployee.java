@@ -4,24 +4,26 @@
  * and open the template in the editor.
  */
 
-package my.concrete;
+package my.Interface;
 
 /**
  *
  * @author Alex
  */
-public class SalaryPlusCommissionEmployee extends SalariedEmployee {
+public class SalaryPlusCommissionEmployee extends SalaryEmployee{
+    
+    private SalaryEmployee se;
     
     private static final double COMMISSION_RATE = .03;
     private double commissionMade;
     private double weeklyTakeHome;
-    private SalariedEmployee se;
     
-    public SalaryPlusCommissionEmployee( SalariedEmployee se ){
+    
+    public SalaryPlusCommissionEmployee( SalaryEmployee se ){
         this.se = se;
     }
 
-    public SalariedEmployee getSe() {
+    public SalaryEmployee getSe() {
         return se;
     }
 
@@ -34,7 +36,7 @@ public class SalaryPlusCommissionEmployee extends SalariedEmployee {
         this.commissionMade = commissionMade;
     }
 
-    public void setSe(SalariedEmployee se) {
+    public void setSe(SalaryEmployee se) {
         this.se = se;
     }
     
@@ -44,8 +46,9 @@ public class SalaryPlusCommissionEmployee extends SalariedEmployee {
     }
     
     @Override
-    public String toString () {
-        return  se.toString() +
-                "\nCommission: $" + this.getCommissionMade();
+    public String toString(){
+        return se.toString() + "\nCommission Made: $" + this.getCommissionMade() + 
+                "\nTotal Made This Year: $" + getWeeklyTakeHome();
     }
+
 }
