@@ -24,8 +24,6 @@ public class Employee {
         this.employeeID = employeeID;
     }
     
-    public Employee(  ){}
-    
     public void setFirstName( String firstName ){
         this.firstName = firstName;
     }
