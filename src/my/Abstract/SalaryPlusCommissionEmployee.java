@@ -48,10 +48,4 @@ public class SalaryPlusCommissionEmployee extends SalaryEmployee {
                 +"\nWeekly Earnings: " + this.getWeeklyEarnings();
     }
     
-    public static void main(String[] args) {
-        Employee e = new SalaryPlusCommissionEmployee( "Alex" , "Plouff" , "Produce" , 7500);
-        
-        System.out.println(e.toString());
-    }
-    
 }

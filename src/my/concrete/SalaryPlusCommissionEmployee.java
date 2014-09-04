@@ -15,37 +15,30 @@ public class SalaryPlusCommissionEmployee extends SalariedEmployee {
     private static final double COMMISSION_RATE = .03;
     private double commissionMade;
     private double weeklyTakeHome;
-    private SalariedEmployee se;
     
-    public SalaryPlusCommissionEmployee( SalariedEmployee se ){
-        this.se = se;
-    }
-
-    public SalariedEmployee getSe() {
-        return se;
+    public SalaryPlusCommissionEmployee( String firstName , String lastName , 
+                                        String employeeID , double salary){
+        super( firstName , lastName , employeeID , salary );
+        
     }
 
     public double getCommissionMade() {
-        commissionMade = se.getSalary() * COMMISSION_RATE;
+        commissionMade = super.getSalary() * COMMISSION_RATE;
         return commissionMade;
     }
 
     public void setCommissionMade(double commissionMade) {
         this.commissionMade = commissionMade;
     }
-
-    public void setSe(SalariedEmployee se) {
-        this.se = se;
-    }
     
     public double getWeeklyTakeHome(){
-        weeklyTakeHome = se.getSalary() + this.commissionMade;        
+        weeklyTakeHome = super.getSalary() + this.commissionMade;        
         return weeklyTakeHome;
     }
     
     @Override
     public String toString () {
-        return  se.toString() +
+        return  super.toString() +
                 "\nCommission: $" + this.getCommissionMade();
     }
 }

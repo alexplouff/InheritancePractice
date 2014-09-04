@@ -12,42 +12,32 @@ package my.Interface;
  */
 public class SalaryPlusCommissionEmployee extends SalaryEmployee{
     
-    private SalaryEmployee se;
-    
     private static final double COMMISSION_RATE = .03;
     private double commissionMade;
     private double weeklyTakeHome;
     
+    public SalaryPlusCommissionEmployee ( String firstName, String lastName,    
+                                            String department ,double salary){
+        super( firstName , lastName , department , salary );
+    }
     
-    public SalaryPlusCommissionEmployee( SalaryEmployee se ){
-        this.se = se;
-    }
-
-    public SalaryEmployee getSe() {
-        return se;
-    }
-
     public double getCommissionMade() {
-        commissionMade = se.getSalary() * COMMISSION_RATE;
+        commissionMade = getSalary() * COMMISSION_RATE;
         return commissionMade;
     }
 
     public void setCommissionMade(double commissionMade) {
         this.commissionMade = commissionMade;
     }
-
-    public void setSe(SalaryEmployee se) {
-        this.se = se;
-    }
     
     public double getWeeklyTakeHome(){
-        weeklyTakeHome = se.getSalary() + this.commissionMade;        
+        weeklyTakeHome = getSalary() + this.commissionMade;        
         return weeklyTakeHome;
     }
     
     @Override
     public String toString(){
-        return se.toString() + "\nCommission Made: $" + this.getCommissionMade() + 
+        return super.toString() + "\nCommission Made: $" + this.getCommissionMade() + 
                 "\nTotal Made This Year: $" + getWeeklyTakeHome();
     }
 

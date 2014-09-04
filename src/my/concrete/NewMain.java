@@ -18,22 +18,11 @@ public class NewMain {
     public static void main(String[] args) {
         
         
-        Employee e1 = new Employee( "Alex" , "Plouff" , "E102" );
-        Employee e2 = new Employee( "Scott" , "Plouff" ,"R201");
-        Employee e3 = new Employee( "Ashley" , "Plouff" , "F422");
-        Employee e4 = new Employee( "Jamie" , "Plouff" , "A233");
-        Employee e5 = new Employee( "Cindy" , "Plouff" , "D322");
-        
-        e1 = new HourlyEmployee( 15 , 40 , e1 );
-        e2 = new HourlyEmployee( 20 , 40 , e2 );
-        
-        e3 = new SalariedEmployee( e3 , 65000 );
-        
-        e4 = new SalariedEmployee( e4 , 75000 );
-        e5 = new SalariedEmployee( e5 , 80000 );
-        
-        e4 = new SalaryPlusCommissionEmployee( (SalariedEmployee) e4);
-        e5 = new SalaryPlusCommissionEmployee( (SalariedEmployee) e5);
+        Employee e1 = new HourlyEmployee( "Alex" , "Plouff" , "E102" , 15 , 40 );
+        Employee e2 = new HourlyEmployee( "Scott" , "Plouff" ,"R201" , 20 , 40 );
+        Employee e3 = new SalariedEmployee( "Ashley" , "Plouff" , "F422" , 50000);
+        Employee e4 = new SalaryPlusCommissionEmployee(  "Jamie" , "Plouff" , "A233" , 65000 );
+        Employee e5 = new SalaryPlusCommissionEmployee( "Cindy" , "Plouff" , "D322" , 70000 );
         
         Employee [] employees = new Employee [ 5 ] ;
         employees[0] = e1;

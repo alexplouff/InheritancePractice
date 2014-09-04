@@ -15,21 +15,21 @@ public class NewMain {
     public static void main(String[] args) {
         
     
-    
     Employee hourly = new HourlyEmployee( "Alex" , "Plouff" , "Produce" , 12 , 40 );
     Employee salaryEmployee = new SalaryEmployee( "Alex" , "Plouff" , "Produce" , 50000);
     
     Employee salaryPlus = new SalaryEmployee("Alex" , "plouff" , "produce" , 75000);
-    SalaryPlusCommissionEmployee salaryc = new SalaryPlusCommissionEmployee( (SalaryEmployee) salaryPlus );
+    Employee salaryc = new SalaryPlusCommissionEmployee( "Scott" , "Plouff" , "Sales" , 80000 );
         
-    Employee [] employees = new Employee [3];
+    Employee [] employees = new Employee [4];
     
     employees[0] = hourly;
     employees[1] = salaryEmployee;
-    employees[2] = salaryc;
+    employees[2] = salaryPlus;
+    employees[3] = salaryc;
     
     for(Employee e : employees)
-            System.out.println(e);
+            System.out.println(e+"\n");
     
     }
 }

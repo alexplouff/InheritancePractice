@@ -26,8 +26,8 @@ public class NewMain {
     employees[1] = e2;
     employees[2] = e3;
     
-    for (Employee e : employees)
-            System.out.println(e);
+    for (Employee employee : employees)
+            System.out.println(employee +"\n");
     }
     
 }

@@ -24,8 +24,6 @@ public class SalaryEmployee implements Employee{
         this.department = department;
         this.salary = salary;
     }
-    
-    public SalaryEmployee(){}
        
      @Override
     public void setFirstName(String firstName) {
@@ -65,6 +63,7 @@ public class SalaryEmployee implements Employee{
         this.salary = salary;
     }
     
+    @Override
     public String toString(){
 
         return "Name: " + firstName + " " + lastName

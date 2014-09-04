@@ -15,14 +15,12 @@ public class SalariedEmployee extends Employee{
     private double salary;
     private final static int MONTHS_IN_YEAR = 12;
     private double monthlyPay;
-    private Employee employee;
     
-    public SalariedEmployee ( Employee employee , double salary ){
+    public SalariedEmployee ( String firstName , String lastName , 
+                             String employeeID , double salary ){
+        super( firstName , lastName , employeeID );
         this.salary = salary;
-        this.employee = employee;
     }
-    
-    public SalariedEmployee(  ) {}
 
     public double getSalary() {
         return salary;
@@ -30,14 +28,6 @@ public class SalariedEmployee extends Employee{
 
     public void setSalary(double salary) {
         this.salary = salary;
-    }
-
-    public Employee getEmployee() {
-        return employee;
-    }
-
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
     }
     
     public double getMonthlyPay() {
@@ -47,7 +37,8 @@ public class SalariedEmployee extends Employee{
     
     @Override
     public String toString () {
-        return employee.toString() + "\nSalary: $" + salary 
+        return super.toString() + "\nSalary: $" + salary 
                         + "\nMonthly Take Home: $" + this.getMonthlyPay();
     }    
+  
 }

@@ -14,12 +14,12 @@ public class HourlyEmployee extends Employee {
 
     private double hourlyRate;
     private double hoursWorked;
-    private Employee e;
     
-    public HourlyEmployee( double hourlyRate, double hoursWorked, Employee e) {
+    public HourlyEmployee( String firstName, String lastName , String employeeID , 
+                                double hourlyRate, double hoursWorked ) {
+        super(firstName , lastName , employeeID );
         this.hourlyRate = hourlyRate;
         this.hoursWorked = hoursWorked;
-        this.e = e;
     }
     
     public void setHourlyRate(double hourlyRate) {
@@ -45,7 +45,10 @@ public class HourlyEmployee extends Employee {
     @Override
     public String toString(){
 
-        return e.toString() + "\n" + "Wage: $" + hourlyRate + "/hour\n" + "Hours Worked: "
-                                + hoursWorked + "\nThis Weeks Pay: " + this.getWeeklyPay() ; 
+        return  super.toString()  +
+                "\nWage: $" + hourlyRate + "/hour\n" + "Hours Worked: " + hoursWorked +
+                "\nThis Weeks Pay: " + this.getWeeklyPay() ; 
     }
+    
+  
 }
